@@ -1,5 +1,39 @@
 # Changelog
 
+## v1.0.0 — 2026-11-04
+
+The claim table, the evidence rules, and the verdicts
+are unchanged from v0.1.0 — this release is about
+being installable and readable as a product:
+
+- **Packaged install.** `pyproject.toml` (setuptools,
+  single-module layout) — `pip install
+  done-claim-auditor` / `pipx install
+  done-claim-auditor` now put a `done-claim-auditor`
+  console command on PATH. `python3
+  src/done_claim_auditor.py` from a checkout keeps
+  working, unchanged, with byte-identical output.
+- **README rebuilt as a landing page:** one-line hook,
+  badge row, an animated demo (the liar session's
+  claims contradicted and unevidenced by its own
+  transcript, then the honest session's four claims
+  all evidenced), a 20-second quickstart, the bundled
+  fixtures judged in a table, and a comparison table
+  against trusting the summary, hosted receipts
+  services, and reading transcripts by eye. The full
+  reference — verdict rules, the claim and evidence
+  tables, verbatim runs, known limits — moved below
+  the fold.
+- **Demo + social assets** in `docs/`: `demo.gif`
+  (rendered from real v1.0.0 output) and
+  `social-preview.png` (1280×640).
+- **Community files:** SECURITY.md and issue templates
+  added; CONTRIBUTING and FUNDING unchanged.
+- Version string is now 1.0.0 everywhere (tool header,
+  `--json` output, package metadata). All 36 tests
+  pass unmodified — the only source changes are the
+  version strings.
+
 ## v0.1.0 — 2026-11-04
 
 First release.

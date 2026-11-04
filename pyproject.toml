@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "done-claim-auditor"
+version = "1.0.0"
+description = "Audit an AI agent's completion claims against its own session transcript — every claim EVIDENCED, UNEVIDENCED or CONTRADICTED, with line numbers."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Jasveer Singh" },
+]
+keywords = [
+    "ai-agents",
+    "claude-code",
+    "audit",
+    "verification",
+    "cli",
+    "developer-tools",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Quality Assurance",
+    "Topic :: Utilities",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/jasveerai88/done-claim-auditor"
+Repository = "https://github.com/jasveerai88/done-claim-auditor"
+Issues = "https://github.com/jasveerai88/done-claim-auditor/issues"
+
+[project.scripts]
+done-claim-auditor = "done_claim_auditor:main"
+
+# The implementation is a single standard-library module in
+# src/; it is installed as the top-level module
+# `done_claim_auditor`, and `python3 src/done_claim_auditor.py`
+# keeps working from a checkout.
+[tool.setuptools]
+package-dir = { "" = "src" }
+py-modules = ["done_claim_auditor"]

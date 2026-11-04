@@ -42,7 +42,7 @@ Do NOT use when:
 - You need ground truth about the work itself. Run the
   tests, read the files, check the remote — the auditor is
   the triage, not the verification.
-- The transcript is not Claude Code JSONL. v0.1.0 supports
+- The transcript is not Claude Code JSONL. v1.0.0 supports
   exactly that one format; anything else is a clean error,
   not a partial audit.
 - You want live interception of tool calls as they happen.
@@ -52,15 +52,20 @@ Do NOT use when:
 
 ```bash
 # Audit one transcript (text view)
-python3 src/done_claim_auditor.py audit TRANSCRIPT.jsonl
+done-claim-auditor audit TRANSCRIPT.jsonl
 
 # One JSON object, same verdicts and exit codes
-python3 src/done_claim_auditor.py audit TRANSCRIPT.jsonl --json
+done-claim-auditor audit TRANSCRIPT.jsonl --json
 
 # Types, line numbers and verdicts only — no transcript text
-python3 src/done_claim_auditor.py audit TRANSCRIPT.jsonl --no-excerpts
-python3 src/done_claim_auditor.py audit TRANSCRIPT.jsonl --json --no-excerpts
+done-claim-auditor audit TRANSCRIPT.jsonl --no-excerpts
+done-claim-auditor audit TRANSCRIPT.jsonl --json --no-excerpts
 ```
+
+Installed with `pipx install git+https://github.com/jasveerai88/done-claim-auditor` (or
+`pip install git+https://github.com/jasveerai88/done-claim-auditor`). From a source
+checkout, `python3 src/done_claim_auditor.py audit …`
+is the same command with the same output.
 
 Transcripts live at `~/.claude/projects/<project>/<session>.jsonl`.
 There are no other commands and no configuration file.

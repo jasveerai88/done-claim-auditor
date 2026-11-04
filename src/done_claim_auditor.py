@@ -14,7 +14,7 @@ call through it — this tool checks the transcripts you already
 have, offline, after the fact. It is the mechanical version of
 "no record, no credit."
 
-WHAT IT READS (v0.1.0 — one format, stated plainly):
+WHAT IT READS (v1.0.0 — one format, stated plainly):
 Claude Code session transcripts: JSON Lines files, one JSON
 object per line, as written to
 ~/.claude/projects/<project>/<session>.jsonl — assistant
@@ -71,7 +71,7 @@ import re
 import sys
 from pathlib import Path
 
-__version__ = "0.1.0"
+__version__ = "1.0.0"
 TOOL = "done-claim-auditor"
 FORMAT_NAME = "claude-code-jsonl"
 FORMAT_LABEL = "Claude Code session JSONL"
@@ -358,7 +358,7 @@ def parse_transcript(path):
         raise ToolError(
             f"{path.name} does not look like a {FORMAT_LABEL} "
             f"file — no line carries a \"type\" or \"message\" "
-            f"field. v0.1.0 reads Claude Code session "
+            f"field. v1.0.0 reads Claude Code session "
             f"transcripts only (one JSON object per line, "
             f"assistant messages with text/tool_use blocks, "
             f"user messages with tool_result blocks)")

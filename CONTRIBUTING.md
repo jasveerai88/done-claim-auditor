@@ -14,7 +14,7 @@ Contributions are welcome — bug reports, fixes and small focused features.
   work on hostile code — and the moment the auditor acts on its
   contents it stops being an auditor. A pull request that adds
   execution changes what this tool *is* and will not be merged.
-- **One format, honestly.** v0.1.0 reads Claude Code JSONL.
+- **One format, honestly.** v1.0.0 reads Claude Code JSONL.
   A new format arrives as a new parser beside the existing one,
   with its own fixtures and its own detection rule — never as a
   loosening of the current parser until it "sort of" reads other
