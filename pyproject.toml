@@ -8,7 +8,7 @@ version = "1.0.0"
 description = "Audit an AI agent's completion claims against its own session transcript — every claim EVIDENCED, UNEVIDENCED or CONTRADICTED, with line numbers."
 readme = "README.md"
 requires-python = ">=3.10"
-license = { text = "MIT" }
+license = "MIT"
 authors = [
     { name = "Jasveer Singh" },
 ]
@@ -24,7 +24,6 @@ classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Environment :: Console",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.10",
@@ -39,6 +38,7 @@ dependencies = []
 Homepage = "https://github.com/jasveerai88/done-claim-auditor"
 Repository = "https://github.com/jasveerai88/done-claim-auditor"
 Issues = "https://github.com/jasveerai88/done-claim-auditor/issues"
+Changelog = "https://github.com/jasveerai88/done-claim-auditor/blob/main/CHANGELOG.md"
 
 [project.scripts]
 done-claim-auditor = "done_claim_auditor:main"
