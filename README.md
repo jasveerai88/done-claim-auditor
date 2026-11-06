@@ -56,7 +56,7 @@ mechanical version of "no record, no credit."
 ## Quick start
 
 ```bash
-pipx install git+https://github.com/jasveerai88/done-claim-auditor           # or: pip install git+https://github.com/jasveerai88/done-claim-auditor
+pipx install done-claim-auditor           # or: pip install done-claim-auditor
 done-claim-auditor audit examples/liar-session.jsonl   # bundled fixture, from a checkout
 ```
 
